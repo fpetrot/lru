@@ -1,7 +1,7 @@
 # lru
 Quick hack to compare two software implementations of lru.
 
-The first implementation is somehow trivial: there is a single counter that whose value is attached to a way when the way is accessed, and the counter is imcremented.
+The first implementation is somehow trivial: there is a single counter whose value is assigned to a way when the way is accessed, and the counter is incremented.
 Then, when looking for a way to evict, we simply traverse all the ways looking for the one with the lowest value.
 Having a `uint64_t` counter leads to very infrequent non-lru replacements.
 This is the implementation used in, e.g., the cache plugin of QEMU.

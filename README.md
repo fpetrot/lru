@@ -11,7 +11,7 @@ It uses the tricks that is described in Chapters 7 and 6 of Hacker's Delight to 
 Going up to 16-ways means working on 256-bit values, not natively supported neither by the hardware (although I didn't check the SIMD extensions available nowadays) nor by the compiler.
 
 Overall the results are not what I would have expected: the trivial approach beats the matrix one clearly, ...
-[Here are the results](lru-compared.pdf)
+![Here are the results](./lru-compared.png)
 
 I first used `random()` to select the ways, but the function eats up too much time, so I went for a trivial increment, although the compiler does not seem to over-optimize the stuffs.
 
